@@ -1,11 +1,48 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
+<Layout title="Inicio | Tu Empresa">
+  <!-- Header -->
+  <header class="bg-white shadow-md">
+    <div class="container mx-auto p-4 flex justify-between items-center">
+		<img src="src/assets/atm.svg" alt="Astro logo" class="w-32" />
 
-<Layout>
-	<Welcome />
+      <nav class="space-x-4">
+        <a href="#servicios" class="text-gray-700 hover:text-p1">Servicios</a>
+        <a href="#contacto" class="text-gray-700 hover:text-p1">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="py-20 text-center">
+    <h2 class="text-4xl font-bold mb-4">Creamos sistemas a medida para tu negocio</h2>
+    <p class="mb-6 text-lg text-gray-600">Automatiza, escala y mejora tus procesos con software personalizado.</p>
+    <a href="#contacto" class="bg-p1 text-white px-6 py-3 rounded-lg hover:bg-p1 transition">Solicita una cotización</a>
+  </section>
+
+  <!-- Servicios -->
+  <section id="servicios" class="py-16 container mx-auto text-center">
+    <h3 class="text-3xl font-semibold mb-10">¿Qué ofrecemos?</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-white p-6 shadow rounded">
+        <h4 class="text-xl font-bold mb-2">Sistemas Web</h4>
+        <p>Aplicaciones web seguras y escalables.</p>
+      </div>
+      <div class="bg-white p-6 shadow rounded">
+        <h4 class="text-xl font-bold mb-2">Integraciones API</h4>
+        <p>Conectamos tus sistemas con terceros.</p>
+      </div>
+      <div class="bg-white p-6 shadow rounded">
+        <h4 class="text-xl font-bold mb-2">Consultoría</h4>
+        <p>Te ayudamos a planificar tu solución ideal.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contacto" class="bg-gray-100 py-10 text-center">
+    <p class="text-gray-600 mb-2">© {new Date().getFullYear()} Atmosfera - Todos los derechos reservados</p>
+    <p class="text-gray-500">Correo: atmosfera.soltec@gmail.com</p>
+  </footer>
 </Layout>
