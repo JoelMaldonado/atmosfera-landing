@@ -1,0 +1,22 @@
+---
+// Puedes pasar props si necesitas (como título dinámico)
+const { title = "Olympus Courier" } = Astro.props;
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <link rel="icon" href="/olympus.ico" />
+  </head>
+  <body class="font-sans text-gray-800 bg-gray-50">
+    <main class="max-w-4xl px-6 py-10 mx-auto">
+      <slot />
+    </main>
+    <footer class="mt-10 text-sm text-center text-gray-500">
+      © 2025 Olympus Courier · Desarrollado por Joel Maldonado · Atmosfera
+      Soluciones Tecnológicas
+    </footer>
+  </body>
+</html>
